@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quarterly Earnings — Interactive Reveal.js Presentation</title>
+
+  <!-- Reveal.js (CDN) -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4/dist/reveal.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4/dist/theme/black.css" id="theme">
+
+  <!-- Highlight.js for code highlighting -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/default.min.css">
+
+  <!-- KaTeX for math typesetting -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css">
+
+  <style>
+    /* Small custom styling for the slides */
+    .speaker-email { position: absolute; bottom: 20px; right: 20px; font-size: 0.9rem; opacity: 0.8; }
+    .company-logo { width: 140px; }
+    pre code { font-size: 0.9rem; }
+  </style>
+</head>
+<body>
+
+  <div class="reveal">
+    <div class="slides">
+
+      <!-- Title slide -->
+      <section>
+        <h1>Q3 Quarterly Earnings — Interactive Report</h1>
+        <p class="lead">Modern, interactive Reveal.js presentation for stakeholders</p>
+        <p class="speaker-email">Contact: 24f2003458@ds.study.iitm.ac.in</p>
+        <aside class="notes">
+          Start by welcoming attendees and stating the agenda:
+          1) Highlights  2) Financials 3) Forecast 4) Q&A
+        </aside>
+      </section>
+
+      <!-- Markdown slide (uses Reveal's markdown plugin) -->
+      <section data-markdown>
+        <script type="text/template">
+
+## Executive Summary (Markdown)
+
+- **Revenue:** \$X million (YoY +Y%)
+- **Net Income:** \$Z million
+- **Operating Highlights:** Product A growth, Cost optimisation, Market expansion
+
+> This slide is authored in **Markdown** — easy to edit and maintain.
+
+        </script>
+        <aside class="notes">
+          This slide is intentionally short. Mention top-line items and invite questions at the end.
+        </aside>
+      </section>
+
+      <!-- Fragment animation slide -->
+      <section>
+        <h2>Key Metrics</h2>
+        <ul>
+          <li class="fragment">Revenue: <strong>\$120M</strong></li>
+          <li class="fragment">EBITDA: <strong>\$30M</strong></li>
+          <li class="fragment">Free Cash Flow: <strong>\$18M</strong></li>
+        </ul>
+        <aside class="notes">
+          Reveal each metric with fragments — good for pacing. Point to YoY and QoQ movements.
+        </aside>
+      </section>
+
+      <!-- Code sample with syntax highlighting -->
+      <section>
+        <h2>Reproducible calculation (Python)</h2>
+        <pre><code class="language-python"># Simple ROE calculation
+net_income = 18_000_000
+shareholders_equity = 120_000_000
+roe = net_income / shareholders_equity
+print(f"ROE: {roe:.2%}")
+</code></pre>
+        <aside class="notes">
+          Walk through code quickly; this demonstrates transparency and reproducibility of metrics.
+        </aside>
+      </section>
+
+      <!-- Math / equation slide -->
+      <section>
+        <h2>Financial formula</h2>
+        <p>Return on Equity (ROE):</p>
+        <p>\[ \mathrm{ROE} = \frac{\text{Net Income}}{\text{Shareholders' Equity}} \]</p>
+        <p>Discounted Cash Flow (simplified):</p>
+        <p>\[ \mathrm{PV} = \sum_{t=1}^{T} \frac{CF_t}{(1 + r)^t} \]</p>
+        <aside class="notes">
+          Use KaTeX-rendered math to explain formulas. Highlight assumptions for discount rate and cash flows.
+        </aside>
+      </section>
+
+      <!-- Fragment + image + markdown in same slide -->
+      <section>
+        <h2>Forecast Drivers</h2>
+        <p class="fragment">1. Volume growth in region A</p>
+        <p class="fragment">2. Pricing improvements for product line B</p>
+        <p class="fragment">3. Margin recovery from cost saves</p>
+        <aside class="notes">
+          Show each driver in turn; add short anecdotes about execution plans.
+        </aside>
+      </section>
+
+      <!-- Closing slide with publishing instructions note -->
+      <section>
+        <h2>Published Demo &amp; Next Steps</h2>
+        <ol>
+          <li>Publish this `index.html` to a GitHub repository named <code>earnings-presentation</code>.</li>
+          <li>Enable GitHub Pages for the repository (select `main` branch or `gh-pages`).</li>
+          <li>Access the slide deck at: <code>https://&lt;GITHUB-USERNAME&gt;.github.io/earnings-presentation/</code></li>
+        </ol>
+        <p class="fragment">Add a cache-busting query when updating: <code>?v=1</code>, <code>?v=2</code>, ...</p>
+        <aside class="notes">
+          When guiding stakeholders, offer the URL and mention versioned query strings for content refresh.
+        </aside>
+      </section>
+
+    </div>
+  </div>
+
+  <!-- Reveal.js and plugins -->
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@4/dist/reveal.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@4/plugin/markdown/markdown.esm.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@4/plugin/highlight/highlight.esm.js"></script>
+
+  <!-- Highlight.js core for syntax highlighting (fallback) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+
+  <!-- KaTeX for math rendering -->
+  <script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/auto-render.min.js"></script>
+
+  <script>
+    // Initialize Reveal
+    const deck = new Reveal({
+      hash: true,
+      plugins: [ RevealMarkdown, RevealHighlight ]
+    });
+    deck.initialize();
+
+    // Render KaTeX math in the document
+    document.addEventListener("DOMContentLoaded", function() {
+      renderMathInElement(document.body, {
+        // delimiters for inline and display math
+        delimiters: [
+          {left: "\\(", right: "\\)", display: false},
+          {left: "\\[", right: "\\]", display: true}
+        ]
+      });
+    });
+  </script>
+
+  <!-- Helpful publishing instructions (visible to editor) -->
+  <!--
+    To publish on GitHub Pages (quick steps):
+
+    1. Create a new repository named `earnings-presentation` on GitHub.
+    2. git clone git@github.com:<YOUR_USERNAME>/earnings-presentation.git
+    3. Copy this file into the repo as `index.html`.
+    4. git add index.html && git commit -m "Initial Reveal.js earnings deck" && git push origin main
+    5. In GitHub: Settings -> Pages -> Source -> choose `main` branch and `/ (root)` or enable `gh-pages` branch
+    6. After a minute, the site will be available at:
+       https://<YOUR_USERNAME>.github.io/earnings-presentation/
+
+    Remember: to force-refresh a changed asset, append ?v=2 (or increment) to the URL.
+
+  -->
+</body>
+</html>
