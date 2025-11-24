@@ -1,184 +1,317 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Quarterly Earnings — Interactive Reveal.js Presentation</title>
-
-  <!-- Reveal.js (CDN) -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4/dist/reveal.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4/dist/theme/black.css" id="theme">
-
-  <!-- Highlight.js for code highlighting -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/default.min.css">
-
-  <!-- KaTeX for math typesetting -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css">
-
-  <style>
-    /* Small custom styling for the slides */
-    .speaker-email { position: absolute; bottom: 20px; right: 20px; font-size: 0.9rem; opacity: 0.8; }
-    .company-logo { width: 140px; }
-    pre code { font-size: 0.9rem; }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q4 2024 Earnings Report</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/reveal.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/theme/black.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/monokai.min.css">
+    <style>
+        .reveal h1, .reveal h2, .reveal h3 {
+            text-transform: none;
+        }
+        .reveal .slides section {
+            text-align: left;
+        }
+        .reveal .slides section.center {
+            text-align: center;
+        }
+        .formula-box {
+            background: rgba(255,255,255,0.1);
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+        .contact-info {
+            font-size: 0.8em;
+            color: #42affa;
+            margin-top: 20px;
+        }
+        .metric {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 20px;
+            border-radius: 10px;
+            margin: 10px 0;
+        }
+    </style>
 </head>
 <body>
+    <div class="reveal">
+        <div class="slides">
+            <!-- Title Slide -->
+            <section class="center" data-background-gradient="linear-gradient(135deg, #667eea 0%, #764ba2 100%)">
+                <h1>Q4 2024 Earnings Report</h1>
+                <h3>Financial Performance & Strategic Outlook</h3>
+                <p style="margin-top: 50px;">Prepared by: Technical Consulting Team</p>
+                <p class="contact-info">Contact: 24f2003458@ds.study.iitm.ac.in</p>
+                <p style="font-size: 0.7em; margin-top: 30px;">December 2024</p>
+                <aside class="notes">
+                    Welcome everyone to our Q4 2024 earnings presentation. 
+                    Today we'll cover our financial performance, key metrics, and strategic initiatives.
+                    This presentation includes interactive elements and detailed analysis.
+                </aside>
+            </section>
 
-  <div class="reveal">
-    <div class="slides">
+            <!-- Executive Summary with Markdown -->
+            <section data-markdown data-background="#1a1a2e">
+                <textarea data-template>
+                    ## Executive Summary
+                    
+                    Our Q4 performance demonstrates strong growth across all key metrics:
+                    
+                    * **Revenue Growth**: 23% YoY increase
+                    * **Operating Margin**: Improved to 18.5%
+                    * **Customer Acquisition**: 2.1M new customers
+                    * **Digital Transformation**: 87% digital adoption rate
+                    
+                    ---
+                    
+                    ### Strategic Priorities
+                    
+                    1. Expand digital banking capabilities
+                    2. Enhance cybersecurity infrastructure
+                    3. Drive operational efficiency
+                    4. Strengthen customer relationships
+                </textarea>
+                <aside class="notes">
+                    Key highlights show exceptional performance this quarter.
+                    Revenue growth exceeded expectations at 23%.
+                    Our digital transformation initiatives are paying off significantly.
+                </aside>
+            </section>
 
-      <!-- Title slide -->
-      
-      <!-- Contact Info Slide -->
-      <section>
-        <h2>Technical Consultant Contact</h2>
-        <p><strong>Email:</strong> 24f2003458@ds.study.iitm.ac.in</p>
-        <p>Role: Financial Analytics — Quarterly Reports</p>
-        <p>This contact email is required for the assignment evaluator ✔</p>
-        <aside class="notes">Keep this slide visible to pass automated email validation.</aside>
-      </section>
-      <section>
-        <h1>Q3 Quarterly Earnings — Interactive Report</h1>
-        <p class="lead">Modern, interactive Reveal.js presentation for stakeholders</p>
-        <p class="speaker-email"><strong>Email:</strong> 24f2003458@ds.study.iitm.ac.in</p>
-        <aside class="notes">
-          Start by welcoming attendees and stating the agenda:
-          1) Highlights  2) Financials 3) Forecast 4) Q&A
-        </aside>
-      </section>
+            <!-- Financial Metrics with Fragments -->
+            <section>
+                <h2>Key Financial Metrics</h2>
+                <div class="metric fragment fade-in">
+                    <h3>Total Revenue: $4.2B</h3>
+                    <p>↑ 23% YoY | ↑ 8% QoQ</p>
+                </div>
+                <div class="metric fragment fade-in">
+                    <h3>Net Income: $780M</h3>
+                    <p>↑ 31% YoY | Operating Margin: 18.5%</p>
+                </div>
+                <div class="metric fragment fade-in">
+                    <h3>EPS (Diluted): $2.45</h3>
+                    <p>Beat consensus estimate by $0.18</p>
+                </div>
+                <aside class="notes">
+                    Walk through each metric slowly.
+                    Highlight the YoY growth and margin improvement.
+                    Emphasize the EPS beat - this exceeded analyst expectations.
+                </aside>
+            </section>
 
-      <!-- Markdown slide (uses Reveal's markdown plugin) -->
-      <section data-markdown>
-        <script type="text/template">
+            <!-- Mathematical Formula -->
+            <section>
+                <h2>Return on Equity Analysis</h2>
+                <div class="formula-box">
+                    <h3>DuPont Analysis</h3>
+                    <p>ROE can be decomposed into three components:</p>
+                    <div style="font-size: 1.2em; text-align: center; margin: 30px 0;">
+                        $$ROE = \frac{Net\ Income}{Revenue} \times \frac{Revenue}{Assets} \times \frac{Assets}{Equity}$$
+                    </div>
+                    <p class="fragment">$$ROE = Profit\ Margin \times Asset\ Turnover \times Equity\ Multiplier$$</p>
+                </div>
+                <div class="fragment">
+                    <p><strong>Q4 2024 ROE: 16.8%</strong></p>
+                    <ul>
+                        <li>Profit Margin: 18.5% (↑ 2.1pp)</li>
+                        <li>Asset Turnover: 0.72 (stable)</li>
+                        <li>Equity Multiplier: 1.26 (↓ 0.05)</li>
+                    </ul>
+                </div>
+                <aside class="notes">
+                    This slide shows our DuPont analysis framework.
+                    ROE improved to 16.8%, driven primarily by margin expansion.
+                    The lower equity multiplier reflects our deleveraging strategy.
+                </aside>
+            </section>
 
-## Executive Summary (Markdown)
+            <!-- Code Sample: Risk Calculation -->
+            <section>
+                <h2>Risk Management: VaR Calculation</h2>
+                <p>Our quantitative risk framework using Python:</p>
+                <pre><code class="python" data-trim data-line-numbers="1-2|4-8|10-15">
+import numpy as np
+import pandas as pd
 
-- **Revenue:** \$X million (YoY +Y%)
-- **Net Income:** \$Z million
-- **Operating Highlights:** Product A growth, Cost optimisation, Market expansion
+def calculate_var(returns, confidence_level=0.95):
+    """Calculate Value at Risk using historical simulation"""
+    sorted_returns = np.sort(returns)
+    index = int((1 - confidence_level) * len(sorted_returns))
+    return sorted_returns[index]
 
-> This slide is authored in **Markdown** — easy to edit and maintain.
+# Portfolio risk metrics
+portfolio_returns = np.random.normal(0.001, 0.02, 1000)
+var_95 = calculate_var(portfolio_returns, 0.95)
+var_99 = calculate_var(portfolio_returns, 0.99)
 
-        </script>
-        <aside class="notes">
-          This slide is intentionally short. Mention top-line items and invite questions at the end.
-        </aside>
-      </section>
+print(f"95% VaR: ${var_95*1e6:,.0f}")
+print(f"99% VaR: ${var_99*1e6:,.0f}")
+                </code></pre>
+                <p class="fragment"><strong>Current Portfolio VaR (95%): $2.3M daily</strong></p>
+                <aside class="notes">
+                    This code demonstrates our Value at Risk calculation methodology.
+                    We use historical simulation for portfolio risk assessment.
+                    Our current VaR indicates well-controlled risk exposure.
+                </aside>
+            </section>
 
-      <!-- Fragment animation slide -->
-      <section>
-        <h2>Key Metrics</h2>
-        <ul>
-          <li class="fragment">Revenue: <strong>\$120M</strong></li>
-          <li class="fragment">EBITDA: <strong>\$30M</strong></li>
-          <li class="fragment">Free Cash Flow: <strong>\$18M</strong></li>
-        </ul>
-        <aside class="notes">
-          Reveal each metric with fragments — good for pacing. Point to YoY and QoQ movements.
-        </aside>
-      </section>
+            <!-- Technology Stack -->
+            <section>
+                <h2>Digital Infrastructure</h2>
+                <p>Modern technology stack powering our operations:</p>
+                <pre><code class="javascript" data-trim data-line-numbers="1-3|5-11|13-16">
+// Real-time transaction processing
+const transactionPipeline = {
+  ingestion: 'Apache Kafka',
+  
+  processing: {
+    engine: 'Apache Flink',
+    throughput: '1M txn/sec',
+    latency: '< 50ms',
+    availability: '99.99%'
+  },
+  
+  storage: {
+    operational: 'PostgreSQL + Redis',
+    analytics: 'Snowflake',
+    archival: 'AWS S3 Glacier'
+  }
+};
+                </code></pre>
+                <p class="fragment">Infrastructure investment: <strong>$127M in 2024</strong></p>
+                <aside class="notes">
+                    Our technology infrastructure handles over 1 million transactions per second.
+                    We've invested significantly in scalability and resilience.
+                    This architecture supports our digital-first strategy.
+                </aside>
+            </section>
 
-      <!-- Code sample with syntax highlighting -->
-      <section>
-        <h2>Reproducible calculation (Python)</h2>
-        <pre><code class="language-python"># Simple ROE calculation
-net_income = 18_000_000
-shareholders_equity = 120_000_000
-roe = net_income / shareholders_equity
-print(f"ROE: {roe:.2%}")
-</code></pre>
-        <aside class="notes">
-          Walk through code quickly; this demonstrates transparency and reproducibility of metrics.
-        </aside>
-      </section>
+            <!-- Customer Metrics with Fragments -->
+            <section>
+                <h2>Customer Growth & Engagement</h2>
+                <ul>
+                    <li class="fragment fade-in-then-semi-out">
+                        <strong>Total Customers:</strong> 12.8M (+19% YoY)
+                    </li>
+                    <li class="fragment fade-in-then-semi-out">
+                        <strong>Digital Active Users:</strong> 11.1M (87% penetration)
+                    </li>
+                    <li class="fragment fade-in-then-semi-out">
+                        <strong>Mobile App Rating:</strong> 4.7/5.0 (↑ 0.3)
+                    </li>
+                    <li class="fragment fade-in-then-semi-out">
+                        <strong>NPS Score:</strong> 68 (Industry Leading)
+                    </li>
+                    <li class="fragment highlight-blue">
+                        <strong>Customer Lifetime Value:</strong> $8,400 (↑ 12%)
+                    </li>
+                </ul>
+                <aside class="notes">
+                    Customer metrics show strong engagement and satisfaction.
+                    87% digital penetration is industry-leading.
+                    Focus on the CLV improvement - this is key to long-term profitability.
+                </aside>
+            </section>
 
-      <!-- Math / equation slide -->
-      <section>
-        <h2>Financial formula</h2>
-        <p>Return on Equity (ROE):</p>
-        <p>\[ \mathrm{ROE} = \frac{\text{Net Income}}{\text{Shareholders' Equity}} \]</p>
-        <p>Discounted Cash Flow (simplified):</p>
-        <p>\[ \mathrm{PV} = \sum_{t=1}^{T} \frac{CF_t}{(1 + r)^t} \]</p>
-        <aside class="notes">
-          Use KaTeX-rendered math to explain formulas. Highlight assumptions for discount rate and cash flows.
-        </aside>
-      </section>
+            <!-- Strategic Initiatives -->
+            <section>
+                <h2>2025 Strategic Initiatives</h2>
+                <div class="fragment">
+                    <h3>🤖 AI-Powered Banking</h3>
+                    <ul>
+                        <li>Personalized financial advisory</li>
+                        <li>Fraud detection enhancement (99.7% accuracy)</li>
+                        <li>Automated customer service (60% resolution rate)</li>
+                    </ul>
+                </div>
+                <div class="fragment">
+                    <h3>🌐 Market Expansion</h3>
+                    <ul>
+                        <li>Launch in 3 new international markets</li>
+                        <li>SMB banking platform rollout</li>
+                        <li>Wealth management services expansion</li>
+                    </ul>
+                </div>
+                <aside class="notes">
+                    Our 2025 strategy focuses on AI integration and geographic expansion.
+                    AI initiatives are already showing promising results in fraud detection.
+                    Market expansion will drive our next phase of growth.
+                </aside>
+            </section>
 
-      <!-- Fragment + image + markdown in same slide -->
-      <section>
-        <h2>Forecast Drivers</h2>
-        <p class="fragment">1. Volume growth in region A</p>
-        <p class="fragment">2. Pricing improvements for product line B</p>
-        <p class="fragment">3. Margin recovery from cost saves</p>
-        <aside class="notes">
-          Show each driver in turn; add short anecdotes about execution plans.
-        </aside>
-      </section>
+            <!-- Financial Outlook -->
+            <section>
+                <h2>2025 Financial Outlook</h2>
+                <div class="formula-box">
+                    <h3>Growth Projections</h3>
+                    <p>Expected Compound Annual Growth Rate (CAGR):</p>
+                    <div style="text-align: center; margin: 20px 0;">
+                        $$CAGR = \left(\frac{Ending\ Value}{Beginning\ Value}\right)^{\frac{1}{n}} - 1$$
+                    </div>
+                </div>
+                <div class="fragment">
+                    <ul>
+                        <li><strong>Revenue Growth:</strong> 18-22% (guided range)</li>
+                        <li><strong>Operating Margin:</strong> 19-21% target</li>
+                        <li><strong>Capital Expenditure:</strong> $150M planned</li>
+                        <li><strong>Dividend:</strong> $0.85/share (7% increase)</li>
+                    </ul>
+                </div>
+                <aside class="notes">
+                    Our 2025 guidance reflects continued strong growth momentum.
+                    We're maintaining disciplined investment in infrastructure.
+                    The dividend increase demonstrates confidence in cash flow generation.
+                </aside>
+            </section>
 
-      <!-- Closing slide with publishing instructions note -->
-      <section>
-        <h2>Published Demo &amp; Next Steps</h2>
-        <ol>
-          <li>Publish this `index.html` to a GitHub repository named <code>earnings-presentation</code>.</li>
-          <li>Enable GitHub Pages for the repository (select `main` branch or `gh-pages`).</li>
-          <li>Access the slide deck at: <code>https://&lt;GITHUB-USERNAME&gt;.github.io/earnings-presentation/</code></li>
-        </ol>
-        <p class="fragment">Add a cache-busting query when updating: <code>?v=1</code>, <code>?v=2</code>, ...</p>
-        <aside class="notes">
-          When guiding stakeholders, offer the URL and mention versioned query strings for content refresh.
-        </aside>
-      </section>
-
+            <!-- Closing Slide -->
+            <section class="center" data-background-gradient="linear-gradient(135deg, #667eea 0%, #764ba2 100%)">
+                <h1>Thank You</h1>
+                <h3>Questions & Discussion</h3>
+                <div style="margin-top: 50px;">
+                    <p><strong>Technical Consulting Team</strong></p>
+                    <p class="contact-info">24f2003458@ds.study.iitm.ac.in</p>
+                </div>
+                <p style="margin-top: 50px; font-size: 0.8em;">
+                    Full earnings materials available on investor relations portal
+                </p>
+                <aside class="notes">
+                    Open the floor for questions.
+                    Be prepared to discuss margin drivers, capital allocation, and strategic priorities.
+                    Thank stakeholders for their continued support.
+                </aside>
+            </section>
+        </div>
     </div>
-  </div>
 
-  <!-- Reveal.js and plugins -->
-  <script src="https://cdn.jsdelivr.net/npm/reveal.js@4/dist/reveal.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/reveal.js@4/plugin/markdown/markdown.esm.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/reveal.js@4/plugin/highlight/highlight.esm.js"></script>
-
-  <!-- Highlight.js core for syntax highlighting (fallback) -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
-
-  <!-- KaTeX for math rendering -->
-  <script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/auto-render.min.js"></script>
-
-  <script>
-    // Initialize Reveal
-    const deck = new Reveal({
-      hash: true,
-      plugins: [ RevealMarkdown, RevealHighlight ]
-    });
-    deck.initialize();
-
-    // Render KaTeX math in the document
-    document.addEventListener("DOMContentLoaded", function() {
-      renderMathInElement(document.body, {
-        // delimiters for inline and display math
-        delimiters: [
-          {left: "\\(", right: "\\)", display: false},
-          {left: "\\[", right: "\\]", display: true}
-        ]
-      });
-    });
-  </script>
-
-  <!-- Helpful publishing instructions (visible to editor) -->
-  <!--
-    To publish on GitHub Pages (quick steps):
-
-    1. Create a new repository named `earnings-presentation` on GitHub.
-    2. git clone git@github.com:<YOUR_USERNAME>/earnings-presentation.git
-    3. Copy this file into the repo as `index.html`.
-    4. git add index.html && git commit -m "Initial Reveal.js earnings deck" && git push origin main
-    5. In GitHub: Settings -> Pages -> Source -> choose `main` branch and `/ (root)` or enable `gh-pages` branch
-    6. After a minute, the site will be available at:
-       https://<YOUR_USERNAME>.github.io/earnings-presentation/
-
-    Remember: to force-refresh a changed asset, append ?v=2 (or increment) to the URL.
-
-  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/reveal.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/plugin/markdown/markdown.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/plugin/highlight/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/plugin/notes/notes.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/plugin/math/math.min.js"></script>
+    
+    <script>
+        Reveal.initialize({
+            hash: true,
+            transition: 'slide',
+            transitionSpeed: 'default',
+            backgroundTransition: 'fade',
+            plugins: [RevealMarkdown, RevealHighlight, RevealNotes, RevealMath.KaTeX],
+            math: {
+                mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.min.js',
+                config: 'TeX-AMS_HTML-full'
+            },
+            highlight: {
+                beforeHighlight: (hljs) => {
+                    hljs.highlightAll();
+                }
+            }
+        });
+    </script>
 </body>
 </html>
 
